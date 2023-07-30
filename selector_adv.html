@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors adv</title>
+    <style>
+        h1:hover{
+            background-color: #f84407;
+        }
+        button:focus{
+            background-color: #29d526;
+        }
+        input:disabled{
+            background-color: #32522b;
+        }
+        div :first-child :hover{
+            background-color: #9140fb;
+        }
+        div:last-child{
+            background-color: #eb1d5e;
+        }
+        div:nth-child(n){
+            background-color: #015ef4b5;
+        }
+        h1::after{
+            content:"After!";
+            background-color: #29d526;
+        }
+        h1::before{
+            content:"Before";
+            background-color: #9c0202;
+        }
+        p::first-letter{
+            background-color: rgb(11, 237, 146)111;
+            font-size: 200px;
+            color: #9140fb;
+        }
+        p::first-line{
+            background-color: #ffb700;
+            font-size: medium;
+            color: #9c0202;
+        }
+    </style>
+</head>
+<body>
+    <!-- pseudo classes and pseudo selectors -->
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <span>
+        <input disabled type="checkbox" name="check1" id="">
+        <button>
+        <submit>Submit me </submit>
+    </button>
+    </span>
+    <div>
+        <ul>
+            <li>list 11</li>
+            <li>list 22</li>
+            <li>list 33</li>
+        </ul>
+    </div>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatibus inventore possimus, quasi minima, saepe rerum optio qui veritatis nemo a tenetur atque cupiditate, numquam nihil. Repudiandae nisi omnis in numquam nemo inventore sunt quod. Deserunt earum inventore vitae. At, minima expedita mollitia similique laborum, consequatur aperiam eum qui tempore corporis, vitae veniam? Aliquam, officiis! Facilis modi ducimus, error laboriosam delectus ullam. Laborum eaque saepe voluptatem vel voluptates placeat quod quidem ipsa nostrum obcaecati, illum quia in id corporis, inventore quo fugiat architecto reiciendis, quae odit necessitatibus. Cumque at obcaecati minus accusantium molestias eum rerum fuga id ab repellat. Molestias, aperiam.
+    </p>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+</head>
+
+<body bgcolor="tomato">
+    <h1 style="background-color:rgb(235, 91, 120); border: 10px solid tan;">Multimedia</h1>
+    <img src="wallD.jpg" title="my image" height="300px" width="300px" loading="lazy" alt="abstract painting"> </img>
+    <h2 style="background-color: rgb(235, 91, 120); font-style: italic;border: 10px solid tan; ">let's learn! audio</h2>
+    <br>
+    <audio controls src="wind-chimes-37762.mp3" controlslist="nodownload"></audio>
+    <h3 style="background-color: rgb(148, 135, 161);">Videos Tag</h3>
+    <video src="vid1.mp4" controls controlslist="nodownload" width="400" height="400"></video>
+    <br>
+    <form action="./Signup.js" method="get">
+        <h3 style="background-color: aquamarine; border-color: blanchedalmond; border-radius: 5px;">place your Inputs in
+            the form bitch</h3>
+        <ol>
+            <li>
+                <label for="email">Enter your email</label>
+                <input type="email" name="enter your email" id="email">
+            </li>
+            <br>
+            <li>
+                <label for="Date">Enter Date</label>
+                <input type="date" name="enter date" id="Date">
+            </li>
+            <br>
+            <li>
+                <label for="file">Upload your files</label>
+                <input type="file" name="upload your files to the server" id="file">
+            </li>
+            <br>
+            <li>
+                <label for="password">enter your password</label>
+                <input type="password" name="enter your password" id="password">
+            </li>
+            <br>
+            <input type="submit" value="takes all data to server">
+            <br>
+            <br>
+            <ul style="background-color: aquamarine;">
+                <label for="food preferences" style="color: blueviolet; font-style: italic;"><b>Choose your Food
+                        preferences</b></label>
+                <br>
+                <input type="radio" name="food item1" id="1"><label for="food" style="font-weight: 100;">chicken</label>
+                <input type="radio" name="food item2" id="2"><label for="food item2">Mutton</label>
+            </ul>
+        </ol>
+    </form>
+    <h3 style="border: 5px solid green; font-style: italic;">using iframe to open the signup.js file</h3>
+    <iframe src="./Signup.js" height="400" width="400"></iframe>
+    <br>
+    <label for="1" style="background-color: rgb(146, 84, 208); font-size: 18px;"><b>choice your gender
+            preferences</b></label>
+    <br>
+    <input class="checkbox" type="checkbox" name="sex" id="1"><label for="male">male</label>
+    <br>
+    <button style="background-color: aqua;" aria-label="smallest button" data-message="smallest button">click here
+        1</button>
+    <button style="background-color: burlywood; font-size: 15px;" arial-label="medium button"
+        ;data-message="second button">click here 2</button>
+    <button style="background-color:cadetblue; font-size: 20px;" aria-label="largest button"
+        ;data-message="third button">click here 3</button>
+    <style>
+        h3 {
+            /* property-name: value */
+            color: #000000
+        }
+    </style><!-- inline css gets more precedence -->
+    <h3 style="color: #fdfbfbf5;">CSS</h3>
+    <style>
+        .checkbox {
+            color: #bb8012;
+        }
+    </style>
+</body>
+
+</html>
