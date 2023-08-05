@@ -14,6 +14,7 @@
             text-decoration: none;
             color: white;
             font-family: 'Fira Mono', monospace;
+            
         }
         #navbar{
             background-color: #0f1111;
@@ -21,25 +22,29 @@
         a{
             margin-right: 200px;
         }
-        .button{
+        #button{
             background-color:orange;
         }
-        .Amazon{
+        #Amazon{
             color: orange;
         }
-        .input{
+        #input{
             color: black;
+            white-space: nowrap;
+        }
+        .a:hover{
+            color: orange;
         }
         </Style>
 </head>
 <body>
     <div id="navbar">
-        <a href="#" class="Amazon">Amazon.in</a>
-        <a href="#">My Cart</a>
-        <a href="#">Account</a>
-        <a href="#">Contact Us</a>
-        <input placeholder="Search Amazon.in" class="input">
-        <button class="button">Search</button>
+        <a href="#" id="Amazon">Amazon.in</a>
+        <a href="#" class="a">My Cart</a>
+        <a href="#" class="a">Account</a>
+        <a href="#" class="a">Contact Us</a>
+        <input placeholder="Search Amazon.in" id="input">
+        <button id="button">Search</button>
     </div>
 </body>
 </html>
