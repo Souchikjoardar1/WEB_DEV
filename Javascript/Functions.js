@@ -14,3 +14,9 @@ function isNigga() {
         console.log("the person is not a nigga!!")
 }
 isNigga()
+let a = 10
+let b=5
+function multi(a, b) {
+    console.log("the product of "+a+" * "+b+" is= "+(a*b));
+}
+multi(a,b)
