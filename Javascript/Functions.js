@@ -19,4 +19,4 @@ let b=5
 function multi(a, b) {
     console.log("the product of "+a+" * "+b+" is= "+(a*b));
 }
-multi(a,b)
+multi(a, b)
