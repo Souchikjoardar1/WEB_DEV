@@ -31,4 +31,7 @@ Jsuser.displayemail=  function () {
     console.log(`my new email is :- ${this.email}`);
 }
 console.log(Jsuser.greeting());
+Jsuser.displayemail = function() {
+    return `my new email is :- ${this.email}`;
+}
 console.log(Jsuser.displayemail());
