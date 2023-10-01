@@ -1,21 +1,34 @@
-let add = (a, b) =>a + b;
-
-console.log(add(10, 20));
-let print = a => console.log(a);
-print(100)
-const person = { //normal function inside an object 
-    name: 'john',
-    place: 'kolkata',
-    greet: function(){
-        console.log(`this in normal function `+this);
-        console.log(`hi my name is ${this.name} and I live in ${this.place}`);
+const user = {
+    username: "souchik",
+    price: 999,
+    welcomeMessage: function () {
+        console.log(`${this.username} welcome to the website`);
+        console.log(this)//inside the scope pf the function this returns the object itself
     }
 }
-person.greet();
-const person1 = { //arrow functions in objects 
-    name: 'elton',
-    place: 'new york',
-    greet: ()=> console.log(`I'm ${this.name} I live in ${this.place}`),
+user.welcomeMessage()
+//outside the scope of the function this in the node env returns an global empty object
+console.log(this)
+//in a browser this returns the window object 
+function coffee() {
+    console.log(this)//returns the window object
 }
-person1.greet()
-// arrow function takes it's this from it's parent
+coffee()
+// The window object in JavaScript browser runtime environment represents the browser window that contains the DOM document. It is the global object in the browser's JavaScript runtime environment and provides access to various properties and methods, such as the document object, which represents the DOM of the current page, and the alert() method, which displays a message box.
+// arrow functions
+// arrow functions are anonymous functions
+// arrow functions do not have their own this keyword
+const addtwonumbers = (num1, num2) => {
+    return num1 + num2
+}
+console.log(addtwonumbers(3435, 5466))
+/*Implicit return: Arrow functions automatically return the value of the expression without needing to use the return keyword.
+No binding of this: Arrow functions do not bind their own this value, so they inherit the this value from the surrounding code. 
+This can be useful in certain situations where you want to maintain the context of this.*/
+const substractnum = (num1, num2) => Math.abs(num1 - num2)
+console.log(substractnum(34, 67));
+//when we are using {} we need to use the return keyword
+//when we using () we do not need to use the return keyword
+// in case of returning an object we need to wrap the object in {}
+const username = (name, loc) => ({ name: "souchik", loc: "kolkata" })
+console.log(username())
