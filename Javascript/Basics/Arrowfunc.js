@@ -30,5 +30,16 @@ console.log(substractnum(34, 67));
 //when we are using {} we need to use the return keyword
 //when we using () we do not need to use the return keyword
 // in case of returning an object we need to wrap the object in {}
-const username = (name, loc) => ({ name: "souchik", loc: "kolkata" })
-console.log(username())
+const username = (name, loc) => ({ name, loc });
+console.log(username("souchik", "kolkata"));
+//Immediately Invoked Function Expression (IIFE)
+//IIFE is a function that runs as soon as it is defined
+//IIFE is a function expression
+//IIFE is not hoisted
+//IIFE is used to avoid polluting the global scope
+(function () {
+    console.log("Immediately Invoked function expression");
+})();
+(function me(name) {
+    console.log(`${name} is a nigga `);
+})('souchik');
