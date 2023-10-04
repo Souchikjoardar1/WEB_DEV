@@ -38,3 +38,19 @@ console.log('displaying the keys of the map');
 // for (const i in m) {//won't be able to iterate over the map using for in loop
 //     console.log(i);
 // }
+arr.forEach((item, index, arr) => {
+    console.log(item,index,arr);
+})//prints the array item , the indexes and the entire array
+const mycoding = [
+    {
+        languagename: "javascript",
+        languagefilename:'java'
+    },
+    {
+        languagefilename: 'python',
+        languagename:'ruby'
+    }
+]
+mycoding.forEach((item) => {
+    console.log(item.languagefilename);
+}) //displaying all the language file name in foreach loop
