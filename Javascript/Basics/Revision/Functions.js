@@ -9,4 +9,7 @@ console.log(add())
 function add1(a,b) {
     return(a+b)
 }
-console.log(add1(234,345))
+console.log(add1(234, 345))
+let name = "souchik"
+n=name.slice(2,5)
+console.log(n);
