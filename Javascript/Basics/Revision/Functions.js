@@ -30,10 +30,22 @@ function a(...numbers) {
     console.log(numbers);
 }
 a(10, 78, 89, 23, 45, 45)
-// arrow functions 
+// arrow functions
 /* this keyword can't be used they don't have their own this context they inherit from their parent scope (window)*/
-let mult = (a,b)=>{
+/*we can remove the parenthesis if there's only one args param */
+let mult = (a,b)=>{ //this is an anonymous function
     return this.a*this.b
 }
 // this won't work here 
-console.log(mult(10,20));
+console.log(mult(10, 20));
+// arrow function in a single line
+let printnum = (...n) => console.log(n);
+printnum(20, 78, 56, 23)
+// since this is an arrow function arguments object is unavailable
+// The arguments object is an array-like object that allows you to access the arguments passed to a traditional function. However, in arrow functions, arguments is not defined.
+// let nums = () => console.log(arguments);
+// nums(45, 56, 32, 88, 56)
+function n(a,b) {
+    console.log(arguments);
+}
+n(45,56)
