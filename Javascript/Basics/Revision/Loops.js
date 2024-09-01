@@ -41,3 +41,11 @@ Object.entries(obj).forEach(e => {
 console.log("accessing the secret value from the symbol defined inside the obj: "+obj[sym]);
 // to access a symbol within an object use obj-name[symbol-name]
 console.log("the data type of the secret value stored in symbol: "+ typeof obj[sym]);
+// Object.freeze() method 
+Object.freeze(obj)
+obj.name = "babu" //no effect
+obj.age = 10//no effect
+// prove that values of keys are unaltered 
+for (let e of Object.entries(obj)) console.log(e);
+console.log(`the values of ${obj.age} and ${obj.name} are unaltered since the object was frozen `);
+

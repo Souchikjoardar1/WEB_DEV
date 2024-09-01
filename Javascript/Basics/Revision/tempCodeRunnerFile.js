@@ -1,1 +1,1 @@
-const prompt = require("prompt-sync");
+//for-in loop: Iterates over the enumerable properties (keys) of an object.
