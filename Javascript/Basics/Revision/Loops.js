@@ -8,7 +8,7 @@ let obj = {
     [sym]:"secret-value" //use square braces for symbols inside an obj
 }
 console.log("exploring the datatypes of the elements inside the obj "+typeof(obj.name)+" "+typeof(obj.age)+" "+typeof(obj.pin)+" "+typeof(obj.x));
-console.log(obj.x("passing args into a function inside an obj "+20,10));
+console.log("passing args into a function inside an obj "+obj.x(20,10));
 
 console.log("for-in loop");
 for (let i in obj) {//for-in loop: Iterates over the enumerable properties (keys) of an object.
@@ -46,6 +46,10 @@ Object.freeze(obj)
 obj.name = "babu" //no effect
 obj.age = 10//no effect
 // prove that values of keys are unaltered 
-for (let e of Object.entries(obj)) console.log(e);
+for (let [key, value] of Object.entries(obj)) {
+    // break the iteration when value of the key age becomes = 23
+    if (value == (obj.age= 23)) break;
+    console.log(`[ '${key}' , '${value}' ]`);
+}
 console.log(`the values of ${obj.age} and ${obj.name} are unaltered since the object was frozen `);
 
