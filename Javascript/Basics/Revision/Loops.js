@@ -46,7 +46,7 @@ Object.freeze(obj)
 obj.name = "babu" //no effect
 obj.age = 10//no effect
 // prove that values of keys are unaltered 
-for (let [key, value] of Object.entries(obj)) {
+for (let [key, value] of Object.entries(obj)) { // destructuring of the object
     // break the iteration when value of the key age becomes = 23
     if (value == (this.age= 23)) break;
     console.log(`[ '${key}' , '${value}' ]`);
