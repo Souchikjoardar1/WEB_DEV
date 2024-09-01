@@ -48,8 +48,40 @@ obj.age = 10//no effect
 // prove that values of keys are unaltered 
 for (let [key, value] of Object.entries(obj)) {
     // break the iteration when value of the key age becomes = 23
-    if (value == (obj.age= 23)) break;
+    if (value == (this.age= 23)) break;
     console.log(`[ '${key}' , '${value}' ]`);
 }
 console.log(`the values of ${obj.age} and ${obj.name} are unaltered since the object was frozen `);
-
+// deep copy and shallow copy in js  objects
+let o1 = {
+    1: "a",
+    2: "b",
+    3: "c"
+}
+let o2 = {
+    4: "d",
+    5: "e",
+    6: "f"
+}
+console.log(...Object.entries(o1), ...Object.entries(o2));
+// eg of shallow copy
+let o3 = { ...o1, ...o2 }
+/* In JavaScript, you need to use bracket notation([]) 
+to access object properties when the property names 
+are not valid identifiers or are dynamically determined*/
+o3[2] = "souchik" 
+console.log(o3)
+console.log(o1[2]);
+/*Valid identifiers must start with a letter, 
+underscore (_), or dollar sign ($) and can contain 
+alphanumeric characters, underscores, and dollar signs.
+Numeric property names, even though they are valid keys
+in an object, do not meet these criteria and thus 
+cannot be accessed using dot notation. */
+// eg of deep copy
+let o4 = o1 = o2 = o3
+console.log(o4);
+o4[1] = "svibsdjvn"
+console.log(o4);
+console.log(o1[1]);
+console.log(o1);
