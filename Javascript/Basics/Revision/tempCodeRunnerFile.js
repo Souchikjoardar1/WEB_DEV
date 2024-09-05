@@ -1,1 +1,5 @@
-//for-in loop: Iterates over the enumerable properties (keys) of an object.
+console.log(m);
+// for (const e of m) {
+//     console.log(e);
+    
+// }
