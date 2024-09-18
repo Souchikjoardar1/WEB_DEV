@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM practice</title>
+</head>
+<body style="background-color: black;color: white;">
+    <script>
+        let div=document.createElement('div')
+        console.log(div);
+        let h1=document.createElement('h1')
+        console.log(h1);
+        div.className="main"
+        div.id=Math.round(Math.random()*10+1)
+        div.setAttribute("title","generated title")
+        div.style.backgroundColor="orange"
+        div.style.padding="10px"
+        div.style.borderRadius="10px"
+        div.innerText="DOM code"
+        const addtext=document.createTextNode('chai aur code')
+        div.appendChild(addtext)
+        document.body.appendChild(div)
+    </script>
+</body>
+</html>

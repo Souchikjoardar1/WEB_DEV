@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM talks</title>
+</head>
+<body style="background-color: black;color: white;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // insertion
+    function addLanguage(langName){
+       const e=document.createElement('li')
+       e.innerHTML=langName
+       document.querySelector('.language')
+       .appendChild(e)
+    }
+    /*created a node of a li and stored it in variable e
+    appendchild() method only accepts a node in a nodelist
+    and here e is a node child which will be appended to the
+    list */
+    addLanguage("java")
+    addLanguage("cobol")
+    addLanguage("c")
+    // add language in an optimized manner
+    function addOptiLanguage(langName){
+        const li=document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addOptiLanguage("mojo")
+    // modification method1
+    const secondLang=document.querySelector('li:nth-child(2)')
+    secondLang.textContent="jython"
+    // modification method 2
+    const newli=document.createElement('li')
+    newli.textContent="cupid"
+    secondLang.replaceWith(newli)
+    // removal 
+    const lastElement=document.querySelector('li:last-child')
+    lastElement.remove()
+</script>
+</html>
