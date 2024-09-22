@@ -21,4 +21,4 @@ else
 console.log(typeof (result)); //infinity is a number
 // ternary 
 let userlogin = false
-userlogin ?console.log("welcome to the site"):console.log("please login ");
+userlogin ? console.log("welcome to the site") : console.log("please login ");
