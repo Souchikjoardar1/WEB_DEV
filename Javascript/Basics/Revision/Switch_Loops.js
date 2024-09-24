@@ -49,4 +49,8 @@ do {
 }
 while (score2 <= 10);
 let marks = 0;
-// The forEach method in JavaScript is specifically designed to work with arrays. It executes a provided function once for each array element. It doesn't work with other data types directly. However, you can use it with array-like objects or iterable objects by converting them to arrays first.
+/* The forEach method in JavaScript is specifically designed to work 
+with arrays. It executes a provided function once for each array element. 
+It doesn't work with other data types directly.
+ However, you can use it with array-like objects or iterable objects
+  by converting them to arrays first.*/
