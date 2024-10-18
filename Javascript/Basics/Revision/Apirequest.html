@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Request Example</title>
+</head>
+<body>
+    <script>
+        // Create a new XMLHttpRequest object
+        const xhr = new XMLHttpRequest();
+        /* 
+        XMLHttpRequest is a built-in browser object that allows you to make HTTP requests to servers.
+        Here, we create a new instance of it and store it in the variable xhr.
+        */
+        // Define the URL for the request
+        let requestURL = 'https://api.github.com/users/Souchikjoardar1';
+        /* 
+        This is the URL we want to send the request to.
+         In this case, it's an API endpoint that provides 
+         information about a GitHub user.
+        */
+        // Initialize the request
+        xhr.open('GET', requestURL); 
+        /*
+        A GET request is a type of HTTP request method used to retrieve data from a server.
+        When you make a GET request, you are asking the server 
+        to send you some data, such as a web page, an image, or data from an API.
+        The open method initializes the request. The first parameter 'GET' 
+        specifies the type of request (GET request), 
+        and the second parameter is the URL we defined earlier.
+        */
+        // Set up a function to handle the response
+        xhr.onreadystatechange = function() {
+            console.log(xhr.readyState); // Log the current readyState
+            if (xhr.readyState === 4) { // Check if the request is complete
+                const data = JSON.parse(this.responseText); // Parse the JSON response
+                console.log(data); // Log the type of the parsed data
+                // console.log(data.followers); // Log the number of followers (correct property name)
+            }
+        };
+        /*
+        Headers in a GET request are key-value pairs sent between the client (e.g., a web browser) 
+        and the server to provide additional information about the request or the response.
+        They are part of the HTTP protocol and help both the client and server understand
+        how to process the request and response.
+        Common HTTP Headers in GET Requests
+        Request Headers: Sent by the client to provide information about the request.
+        Host: Specifies the domain name of the server (for virtual hosting), and optionally the port number.
+        User-Agent: Contains information about the client software (e.g., browser type and version).
+        Accept: Indicates the media types the client can process (e.g., text/html, application/json).
+        Accept-Language: Specifies the preferred languages for the response.
+        Accept-Encoding: Indicates the content encoding (e.g., gzip) the client can handle.
+        Authorization: Contains credentials for authenticating the client with the server.
+        Cache-Control: Directives for caching mechanisms in both requests and responses.
+        Response Headers: Sent by the server to provide information about the response.
+        Content-Type: Indicates the media type of the response (e.g., application/json).
+        Content-Length: Specifies the size of the response body in bytes.
+        Server: Contains information about the server software.
+        Set-Cookie: Used to send cookies from the server to the client.
+        Cache-Control: Directives for caching mechanisms in both requests and responses.
+        In JavaScript, you can set request headers using the setRequestHeader method
+        of the XMLHttpRequest object:
+        onreadystatechange is an event handler that is called whenever the readyState
+         property of the XMLHttpRequest object changes.
+         0: UNSENT - The request has not been sent yet.
+         xhr.readyState can have several values:
+         1: OPENED - The request has been opened.
+         2: HEADERS_RECEIVED - The headers have been received.
+         3: LOADING - The response is being loaded.
+         4: DONE - The request is complete, and the response is ready.
+        */
+        /* 
+        The function checks if xhr.readyState is 4 (DONE), meaning the request is complete.
+        JSON.parse(this.responseText) converts the JSON response text into a JavaScript object.
+        console.log(typeof data); logs the type of the parsed data, which should be an object.
+        */
+        // Send the request
+        xhr.send(); //This sends the request to the server.
+    </script>
+</body>
+</html>
