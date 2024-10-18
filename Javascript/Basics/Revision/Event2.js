@@ -30,7 +30,7 @@ document.getElementById("addNewItem").addEventListener(("click"), function(){
     let newlistitem = document.createElement("li")
     document.getElementById("shoppingList").appendChild(newlistitem).textContent="new item"
 })
-// removing items from a list 
+// removing items from a list
 document.getElementById("removeLastTask").addEventListener(("click"), function () {
     document.getElementById("taskList").lastElementChild.remove()
 })

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black";>
+    <h1 style="color: #fff";>learning async</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // the statement inside settimeout function will appear in the console after 3 secs 
+    function sayMyName(){
+        console.log("learning settimeout function");
+    }
+    const showname=setTimeout(sayMyName,3000)
+    const textchanger=function(){document.querySelector('h1').
+    innerText="the statement inside settimeout function will appear in the console after 3 secs"
+    }
+    const textchangertimeout=setTimeout(textchanger,3000)
+    document.querySelector('#stop').addEventListener(('click'),function() {
+        clearTimeout(textchangertimeout)
+        console.log("stopped");
+    })
+    document.querySelector('#start').addEventListener(('click'),function(){
+        intervalId=setInterval(function(){
+            console.log("chikowski"+Date.now());//Date.now is a function, so it needs to be invoked as Date.now() to get the current timestamp.    
+        })
+    })
+    document.querySelector('#stop').addEventListener(('click'),function(){clearInterval(intervalId)
+        console.log("stopped removed from priority queue");
+    })
+    /*
+    The setInterval function requires two arguments: a callback function and 
+    an interval time (in milliseconds).intervalId is the ID of the interval,
+    not a function that you can call.
+    Interval time in setInterval: I added an interval of 2000 milliseconds (2 seconds)
+    as a second argument to setInterval. Now, it runs every 2 seconds.
+    Fix intervalId: Instead of passing the string "chikowski" directly to intervalId (which was incorrect),
+    I start the interval on button click and log "chikowski" every 2 seconds.
+    */
+</script>
+</html>
