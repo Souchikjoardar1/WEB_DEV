@@ -35,10 +35,24 @@
             console.log(xhr.readyState); // Log the current readyState
             if (xhr.readyState === 4) { // Check if the request is complete
                 const data = JSON.parse(this.responseText); // Parse the JSON response
+                /* 
+                What is this.responseText?
+                this.responseText is a property of the XMLHttpRequest object.
+                It contains the response data as a string when the request is complete.         
+                Why is the response in string format?
+                The server sends the response as a raw string,
+                which could be in various formats like JSON, XML, HTML, or plain text. 
+                The browser does not automatically parse the response into a JavaScript
+                object because it doesn't know the format of the response data. 
+                Therefore, it provides the raw string, and it's up to the developer
+                to parse it if needed.
+                */
                 console.log(data); // Log the type of the parsed data
                 // console.log(data.followers); // Log the number of followers (correct property name)
             }
         };
+        // Send the request
+        xhr.send(); //This sends the request to the server.
         /*
         Headers in a GET request are key-value pairs sent between the client (e.g., a web browser) 
         and the server to provide additional information about the request or the response.
@@ -63,8 +77,8 @@
         of the XMLHttpRequest object:
         onreadystatechange is an event handler that is called whenever the readyState
          property of the XMLHttpRequest object changes.
-         0: UNSENT - The request has not been sent yet.
          xhr.readyState can have several values:
+         0: UNSENT - The request has not been sent yet.
          1: OPENED - The request has been opened.
          2: HEADERS_RECEIVED - The headers have been received.
          3: LOADING - The response is being loaded.
@@ -75,8 +89,6 @@
         JSON.parse(this.responseText) converts the JSON response text into a JavaScript object.
         console.log(typeof data); logs the type of the parsed data, which should be an object.
         */
-        // Send the request
-        xhr.send(); //This sends the request to the server.
     </script>
 </body>
 </html>
