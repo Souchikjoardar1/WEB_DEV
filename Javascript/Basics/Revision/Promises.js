@@ -61,7 +61,7 @@ new Promise(function (resolve,reject) {
 const promiseThree = new Promise(function (resolve, reject) {
     setTimeout(function () {
         resolve({
-            username:"souchik", email:"souchik1@gmail.com"
+            username:"kafka", email:"kafka1@gmail.com"
         })
     },1000)
 })
@@ -169,7 +169,7 @@ getAllUsers()
     Logging Data: The data is logged to the console.
     Error Handling: Any errors during the fetch or JSON parsing are caught and logged.
 */
-fetch('https://api.github.com/users/Souchikjoardar1')
+fetch('https://api.github.com/users/kafkajoardar1')
     .then((response) => {
     return response.json()
     })
