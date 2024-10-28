@@ -1,1 +1,1 @@
-console.log(multiplyby5.prototype);
+this.username
