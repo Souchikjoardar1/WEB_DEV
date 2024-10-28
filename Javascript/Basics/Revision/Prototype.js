@@ -104,3 +104,40 @@ __proto__ Property: Used to access and modify the prototype of regular objects.
 Adding Methods: Methods can be added to the prototype of regular objects using
  __proto__, making them available to the object and its prototype chain.
 */
+
+
+// inheritance in JS (OLD WAY)
+const User = {
+    name: "chai",
+    email:"kafka123@gmail.com"
+}
+const teacher = {
+    makevideo:true
+}
+const TeachingSupport = {
+    isAvailable:false
+}
+const TASupport = {
+    makeAssignment: 'JS assignment',
+    fullTime: true,
+    __proto__: TeachingSupport
+    /*
+    It sets the prototype of the TASupport object to TeachingSupport.
+    This means that TASupport will inherit properties and methods from TeachingSupport.
+    */
+}
+teacher.__proto__ = User
+/*
+This line sets the prototype of the teacher object to User.
+This means that teacher will inherit properties and methods from User.
+*/
+// TASupport can access properties of Teaching support 
+console.log(`the availability of TASUpport is: ${TASupport.isAvailable}`)
+// the user can access properties of teacher object
+console.log(`the teacher makes video: ${teacher.makevideo}`) 
+
+// Modern syntax
+
+Object.setPrototypeOf(User, TASupport)
+// User can access properties of TASupport by inheriting it's prototype 
+console.log(`the user is assigned with: ${User.makeAssignment}`); 
