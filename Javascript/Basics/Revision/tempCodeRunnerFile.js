@@ -1,1 +1,1 @@
-err
+console.log(multiplyby5.prototype);
