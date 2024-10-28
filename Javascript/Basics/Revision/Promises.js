@@ -169,7 +169,7 @@ getAllUsers()
     Logging Data: The data is logged to the console.
     Error Handling: Any errors during the fetch or JSON parsing are caught and logged.
 */
-fetch('https://api.github.com/users/kafkajoardar1')
+fetch('https://api.github.com/users/Souchikjoardar1')
     .then((response) => {
     return response.json()
     })
