@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button clicked</button>
+    <script>
+        /*
+        The code defines a React class with a constructor that sets up a click
+        event listener on a button.
+        The bind method ensures that the handleClick method has the correct this context,
+        referring to the React instance.
+        When the button is clicked, "button clicked" and the React instance are logged to
+        the console.
+        */
+        class React{
+            constructor(){
+                this.library="React"
+                this.server="https://localhost:300"
+                
+                // requirement
+                document
+                .querySelector('button')
+                .addEventListener('click',this.handleClick
+                .bind(this))
+            }
+            /*
+            Purpose of bind:
+            The bind method is used to create a new function that, when called,
+            has its this keyword set to the provided value.
+            In this case, this.handleClick.bind(this) ensures that this inside handleClick refers
+            to the instance of the React class.
+            Without bind:
+            If bind were not used, this inside handleClick would refer to the button element (the event target) instead of the React instance.
+            This would result in undefined or unexpected behavior when accessing properties like this.library or this.server.
+            */
+            handleClick(){
+                console.log("button clicked");
+                console.log(this);
+                
+            }
+        }
+        const app=new React()
+    </script>
+</body>
+</html>
