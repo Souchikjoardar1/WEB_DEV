@@ -24,8 +24,8 @@
                 // requirement
                 document
                 .querySelector('button')
-                .addEventListener('click',this.handleClick)
-                .bind(this)
+                .addEventListener('click',this.handleClick
+                .bind(this))
             }
             /*
             Purpose of bind:
@@ -34,8 +34,10 @@
             In this case, this.handleClick.bind(this) ensures that this inside handleClick refers
             to the instance of the React class.
             Without bind:
-            If bind were not used, this inside handleClick would refer to the button element (the event target) instead of the React instance.
-            This would result in undefined or unexpected behavior when accessing properties like this.library or this.server.
+            If bind were not used, this inside handleClick would refer to the button element
+            (the event target) instead of the React instance.
+            This would result in undefined or unexpected behavior when accessing properties 
+            like this.library or this.server.
             */
             handleClick(){
                 console.log("button clicked");

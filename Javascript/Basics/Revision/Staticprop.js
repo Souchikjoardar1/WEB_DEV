@@ -24,11 +24,11 @@ class User{
 const chikowski = new User("chai")
 chikowski.createId()
 /*
-Instance Method createId: Logs a unique ID for the user instance.
-Creating User Instance: chikowski is an instance of User with username "chai",
-and createId logs its unique ID.
-Class Teacher: Inherits from User, adds an email property, and initializes both 
-username and email in its constructor.
+    Instance Method createId: Logs a unique ID for the user instance.
+    Creating User Instance: chikowski is an instance of User with username "chai",
+    and createId logs its unique ID.
+    Class Teacher: Inherits from User, adds an email property, and initializes both 
+    username and email in its constructor.
 */
 class Teacher extends User{
     constructor(username,email) {
@@ -36,17 +36,17 @@ class Teacher extends User{
         this.email=email
     }
     /*
-This method logs a unique ID for the user.
-this.username refers to the username property of the instance.
-Math.floor(Math.random() * 1000) generates a random number between 0 and 999.
-const chikowski = new User("chai"); creates a new instance of the User class
-with the username "chai".
-chikowski.createId(); calls the createId method on the chikowski instance, logging 
-the unique ID for "chai".
-class Teacher extends User defines a new class Teacher that inherits from the User class.
-The constructor method of Teacher takes two parameters: username and email.
-super(username); calls the constructor of the User class, initializing the username property.
-this.email = email; initializes the email property for the Teacher instance.
+    This method logs a unique ID for the user.
+    this.username refers to the username property of the instance.
+    Math.floor(Math.random() * 1000) generates a random number between 0 and 999.
+    const chikowski = new User("chai"); creates a new instance of the User class
+    with the username "chai".
+    chikowski.createId(); calls the createId method on the chikowski instance, logging 
+    the unique ID for "chai".
+    class Teacher extends User defines a new class Teacher that inherits from the User class.
+    The constructor method of Teacher takes two parameters: username and email.
+    super(username); calls the constructor of the User class, initializing the username property.
+    this.email = email; initializes the email property for the Teacher instance.
     */
 }
 const iphone = new Teacher("phone", "i@phone.com")
