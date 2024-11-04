@@ -25,14 +25,28 @@ If you are using React 17 or later, you can safely remove the React
     to the cart to show the new item count and total. This ensures that the UI 
     (the shopping cart display) is consistent with the current state of the app
     (the actual items and price in the cart).
-  Why Is This Important?
-  Keeping the UI in sync with the app's state ensures that:
-  Users see accurate information (e.g., the right items and prices).
-  Bugs are reduced because the UI reliably reflects what’s in the app’s memory.
-  Debugging is easier since you can look at the state and see where it might differ
-  from what you expect.
+    Why Is This Important?
+    Keeping the UI in sync with the app's state ensures that:
+    Users see accurate information (e.g., the right items and prices).
+    Bugs are reduced because the UI reliably reflects what’s in the app’s memory.
+    Debugging is easier since you can look at the state and see where it might differ
+    from what you expect.
 */
 import ReactDOM from 'react-dom/client'
+/*
+    What is react-dom/client?
+    react-dom/client is a part of React used to display (render) your React components in a web browser.
+    It provides the tools you need to get your React app running on the page.
+    Why is it important?
+    It gives us methods to start a React app and display it inside a specific part of the page (like a <div>).
+    Key Methods in react-dom/client
+    createRoot():
+
+    This is the main method used in React 18 and later to display your app.
+    It sets up a “root” in the DOM (a place where your app will live on the page) and renders your component
+    tree (all the React components you’ve created) into it.
+    Think of createRoot() as the command to tell React, “Start my app here in this part of the page!"
+*/
 import App from './App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root'))
