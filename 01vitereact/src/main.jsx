@@ -5,8 +5,42 @@ is present in your code, but you are not using it directly within the file.
 In modern React (since React 17), you don't need to import React when using JSX,
 but some tools might still expect it.
 If you are using React 17 or later, you can safely remove the React
+A "dev server" (development server) is a server environment used by developers to build, test, and refine
+software applications before they are ready for public use, while a "production server" is the live server
+where the final, fully tested version of the application is hosted and accessible to end users; essentially,
+a dev server is for testing and development, while a production server is for delivering the finished
+product to the public
 */
+/*
+What is npm run dev?
+  The npm run dev command is used to start a development server for an application, which is especially
+  useful for testing and debugging your code. It helps you see how your app will look and behave before it’s finished.
+  When you run npm run dev, it typically launches your app in "development mode," where it’s easier to
+  spot errors and make changes.
+  2. Key Features of npm run dev
+  Hot Module Replacement (HMR): This feature allows you to see changes to your code immediately without
+  having to restart the server manually. If you edit your code, the development server will update the 
+  app instantly to reflect those changes.
+  Automatic Code Reloading: This means the development server watches your files and refreshes the app 
+  whenever you make updates, so you don’t have to keep reloading the page manually.
+  3. Workflow Benefits
+  npm run dev can handle several repetitive tasks for you, like refreshing the app or restarting it when
+  changes are detected. By automating these tasks, npm run dev can make the development process faster 
+  and smoother, so you can focus on writing code instead of managing the server.
+  4. Running with Nodemon
+  npm run dev often uses a tool called Nodemon. Nodemon automatically restarts your app when it detects 
+  file changes. This is especially useful for backend development, as you won’t have to manually stop and 
+  restart the server whenever you update your code.
+  5. Where is npm run dev defined?
+  The command npm run dev is usually set up in a file called package.json, where it’s defined as part of 
+  a list of scripts. When you use this command, Node.js reads the instructions from package.json to start 
+  the development server.
+  Other Common npm Commands
+  npm run build: This command creates a production-ready version of your app, optimized and bundled to run
+  efficiently for users.
+  npm run test: This command runs any tests you’ve set up to check that your code is working correctly.
 
+*/
 /*
     The state of the app in React refers to the current values of data that determine
     how your app looks and behaves at any given moment. This includes things like the
@@ -47,15 +81,27 @@ import ReactDOM from 'react-dom/client'
     tree (all the React components you’ve created) into it.
     Think of createRoot() as the command to tell React, “Start my app here in this part of the page!"
 */
-import App from './App.jsx'
 
+/*
+why .jsx what is it and why is it used within react ?
+  In React, we often need to display dynamic data or respond to user actions. By returning JSX from functions,
+  we can place the UI structure and JavaScript logic together in the same file or component.
+  This enables Component-Based Architecture, where each component manages a specific part of the UI and can
+  have its own logic, styling, and structure in one place.
+  JSX (JavaScript XML) is a syntax that looks like HTML but is actually written in JavaScript. Under the hood,
+  JSX is compiled into regular JavaScript that React can understand and render to the browser.
+  This approach allows developers to write HTML-like code directly within JavaScript, which makes it easier to
+  visualize and manage the structure of the component.
+*/
+import App from './App.jsx'
+// import Chai from './chai.jsx'
 ReactDOM.createRoot(document.getElementById('root'))
   .render(
-  /*In React, rendering refers to the process of converting React components into 
-  the actual HTML elements that the browser can understand and display on the screen.
-  */
+    /*In React, rendering refers to the process of converting React components into 
+    the actual HTML elements that the browser can understand and display on the screen.
+    */
     <App />
-)
+  );
 /*
   why virtual DOM ?
     Updates are sent to the Document Object Model (DOM) after every change to reflect
