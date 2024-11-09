@@ -81,7 +81,7 @@ function App() {
       document.body.style.backgroundColor = "white";
       setTimeout(() => {
         setShowPrompt(true);
-      }, 3000);
+      }, 2000);
     }
   }, [userInput, sequence, gameStarted]);
 
@@ -92,7 +92,7 @@ function App() {
   const handleRestart = (restart) => {
     setShowPrompt(false);
     if (restart) {
-      setSequenceLength((prevLength) => Math.min(prevLength + 2, 6));
+      setSequenceLength((prevLength) => Math.min(prevLength + 2, 4));
       startGame();
     } else {
       setMessage("Game Over");
