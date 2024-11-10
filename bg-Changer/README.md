@@ -1,4 +1,3 @@
-Souchik Joardar's GitHub Profile
 👋 Hi there! Welcome to my GitHub profile! I’m a passionate web developer with hands-on experience in building engaging and interactive front-end applications. Here’s a quick overview of my work and skills.
 
 💻 My Latest Project: Color Memory Game
