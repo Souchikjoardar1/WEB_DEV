@@ -258,49 +258,43 @@ function App() {
         .rules-container {
           display: flex;
           flex-direction: column;
-          align-items: center;
+          gap: 10px;
         }
         .rule {
+          opacity: 0;
           animation: fall 1s ease-in-out forwards;
         }
-        // Apply animation delay to the first rule
         .rule:nth-child(1) {
           animation-delay: 0s;
         }
-        // Apply animation delay to the second rule
         .rule:nth-child(2) {
           animation-delay: 0.5s;
         }
-        // Apply animation delay to the third rule
         .rule:nth-child(3) {
           animation-delay: 1s;
         }
-        // Apply animation delay to the fourth rule
         .rule:nth-child(4) {
           animation-delay: 1.5s;
         }
-        // Define keyframes for the fall animation
         @keyframes fall {
           0% {
-            transform: translateY(-100%); // Start above the viewport
-            opacity: 0; // Start fully transparent
+            transform: translateY(-100%);
+            opacity: 0;
           }
           100% {
-            transform: translateY(0); // End at the original position
-            opacity: 1; // End fully opaque
+            transform: translateY(0);
+            opacity: 1;
           }
         }
-        // Apply flash animation to elements with the flash-message class
         .flash-message {
           animation: flash 1s infinite;
         }
-        // Define keyframes for the flash animation
         @keyframes flash {
           0%, 100% {
-            opacity: 1; // Fully opaque at the start and end
+            opacity: 1;
           }
           50% {
-            opacity: 0; // Fully transparent at the midpoint
+            opacity: 0;
           }
         }
         .bubble {
