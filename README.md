@@ -1,42 +1,38 @@
-# Web Dev Repository
+# Front-End Web Development Projects
 
-Welcome to the **Web Dev** repository! This is my personal space where I document and track my progress in web development, specifically focusing on JavaScript. As a beginner, I find it essential to monitor my daily learning and practice, and this repository serves as a diary of my journey.
+A collection of browser projects and focused exercises in React, JavaScript, HTML, and CSS. Start with the color memory game, then browse the layout and DOM examples.
 
-## About Me
+## Projects to review
 
-I'm an engineering graduate with a degree in Computer Science Engineering. Although I have a formal education in computer science, web development is a field that excites me, and JavaScript, in particular, is a language I'm passionate about mastering. This repository reflects my continuous efforts to learn and apply more advanced JavaScript concepts.
+| Project | What to try | What the code demonstrates |
+| --- | --- | --- |
+| [Color Memory Game](bg-Changer/) | Watch a color sequence, repeat it with the labeled buttons, and replay for a longer round. | React state, timed playback, input validation, and Tailwind CSS |
+| [Web Technology Guide](Mini%20project%20css/CssMini.html) | Navigate between the HTML, CSS, and JavaScript sections. | Semantic HTML, responsive layout, and in-page navigation |
+| [Flexbox Playground](FlexBox/Flex.html) | Compare how the same boxes move under different alignment and spacing rules. | Flex wrapping, justification, and cross-axis alignment |
 
-## What's Inside
+## Run the Color Memory Game
 
-This repository contains:
+Use Node.js 22 or later with npm. Clone the repository and install dependencies from the game's lockfile.
 
-- **Daily Practice Files**: Code snippets, small projects, and exercises that I work on every day to sharpen my JavaScript skills.
-- **Learning Notes**: Notes and summaries on various JavaScript concepts and web development topics that I explore.
-- **Mini Projects**: Small projects where I apply the concepts I've learned. These projects range from basic JavaScript applications to slightly more complex ones as I progress.
-- **Advanced Concepts**: As I grow more comfortable with JavaScript, I plan to dive into more advanced topics. This section will include experiments with ES6+, asynchronous programming, APIs, and more.
+```sh
+git clone https://github.com/Souchikjoardar1/WEB_DEV.git
+cd WEB_DEV/bg-Changer
+npm ci
+npm run dev
+```
 
-## How to Use This Repository
+Open the local URL printed by Vite. Select **Start Game**, watch the sequence, then repeat it. The first round uses two colors. Select **Yes** at the replay prompt to try a four-color round.
 
-This repository is primarily for my personal tracking, but anyone interested in following along or learning from my experience is welcome to explore the content:
+Run `npm run lint` to check the source and `npm run build` to produce a static build in `dist/`. The game runs entirely in the browser.
 
-1. **Browse the Folders**: Each folder is organized by date or topic. Feel free to explore the different folders to see what I've been working on.
-2. **Check Out the Code**: The code is written with simplicity in mind, given my current beginner level. If you spot any improvements or wish to suggest better practices, I'm open to feedback!
-3. **Follow My Progress**: I'll be updating this repository regularly as I continue learning. If you're also on a similar journey, maybe you'll find some of my projects and notes helpful.
+## Browse the exercises
 
-## Future Goals
+Open the static demos directly in a browser after cloning the repository.
 
-As I advance in my learning, I plan to:
+| Topic | Where to start |
+| --- | --- |
+| Browser events and DOM updates | [Event handling](Javascript/EventsJS.html) and [DOM manipulation](Javascript/dom.html) |
+| Asynchronous JavaScript | [Promises](Javascript/Promises.js) and [asynchronous browser example](Javascript/asyncJS.html) |
+| HTML and CSS fundamentals | [Selectors](Basics/selector.html), [spacing](Basics/margins.html), and [Flexbox](FlexBox/Flex.html) |
 
-- Build more complex web applications.
-- Contribute to open-source JavaScript projects.
-- Explore other areas of web development, including front-end frameworks like React, Vue.js, and backend technologies like Node.js.
-
-## Get in Touch
-
-If you're interested in web development, learning JavaScript, or just want to chat about programming, feel free to reach out! You can contact me via [email:- souchik123@gmail.com , linkedin:- https://www.linkedin.com/in/souchik-joardar-03a69123a/].
-
-Happy coding!
-
----
-
-This repository is a work in progress, and I'm excited to see how it evolves as I grow as a developer. Thanks for stopping by!
+[Connect with Souchik Joardar on LinkedIn](https://www.linkedin.com/in/souchik-joardar-03a69123a/)

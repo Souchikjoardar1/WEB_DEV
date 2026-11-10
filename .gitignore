@@ -1,6 +1,16 @@
-.mp4
-.mp3
-.png
-.jpeg
+# Dependencies and build output
+node_modules/
+dist/
+dist-ssr/
+coverage/
+*.log
+
+# Local environment and editor files
 .env
-node_modules
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+tempCodeRunnerFile.*
